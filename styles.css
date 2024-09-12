@@ -87,13 +87,13 @@ img {
     
 }
 
-/*Debuggridstuff
+/*
 .page-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
-}
-*/
+}*/
+
 
 .img-gallery__item:hover .overlay {
     opacity: .95;
@@ -129,19 +129,6 @@ img {
 }
 
 .topnav a {
-    border: 1px solid #515B3A;;
-    display:inline-block;
-    color: #E7CFCD;
-    text-align: center;
-    padding: 14px;
-    font-size: 1.25em;
-    text-decoration: none;
-    background-color: #353D2F;
-    border-radius: 10%;
-}
-
-
-.cvlink a {
     border: 1px solid #515B3A;;
     display:inline-block;
     color: #E7CFCD;
@@ -236,6 +223,49 @@ div.intro {
     }
 }
 
+.aboutintro {
+    grid-column-start:1;
+    grid-column-end:4;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.25em;
+    padding:10px;
+    color:#E7CFCD;
+}
+
+.cvlink {
+    text-align: center;
+    color: #E7CFCD;
+}
+
+.cvlink a {
+    border: 1px solid #515B3A;;
+    display:inline-block;
+    text-align: center;
+    padding: 14px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.25em;
+    text-decoration: none;
+    background-color: #353D2F;
+    border-radius: 10%;
+}
+
+.cvlink a:hover {
+    background-color: #2E3121
+}
+
+.profilepic {
+    grid-column-start:4;
+    grid-column-end:5;
+    text-align: center;
+    img {
+        aspect-ratio: 1;
+        object-fit: cover;
+        padding:4px;
+      }
+      padding:10px;
+}
 
 
 
