@@ -2,7 +2,7 @@
     --body-leading: 1.6;
     --container-padding: 1.5em;
     --container-width: 1260px;
-    --gallery-gap: 1.5em;
+    --gallery-gap: 1em;
     --gallery-items-per-row: 1;
   }
 
@@ -49,7 +49,6 @@ img {
         (var(--gallery-items-per-row) - 1) / var(--gallery-items-per-row)
     );
 }
-
 
 .overlay {
     position:absolute;
@@ -184,6 +183,7 @@ div.intro {
     bottom: 0;
     padding: .5rem;
     padding-left: 1rem;
+    padding-right: 1rem;
 }
 .footer p {
     text-align: left;
