@@ -33,9 +33,12 @@ img {
     flex-wrap: wrap;
     gap: var(--gallery-gap);
     justify-content: center;
+    margin-top:14px;
+    margin-bottom:14px
 }
 
 .img-gallery__item {
+    position:relative;
     img {
       aspect-ratio: 3 / 2;
       object-fit: cover;
@@ -46,31 +49,79 @@ img {
         (var(--gallery-items-per-row) - 1) / var(--gallery-items-per-row)
     );
 }
+
+
+.overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition:.2s ease;
+    background-color: #997FDC;
+}
+
+.overlay__text {
+    color: #515B3A;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
   
 .page-container {
     padding: var(--container-padding);
     max-width: var(--container-width);
     margin-right: auto;
     margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:4px;
+    padding:4px
+    
+}
+
+/*Debuggridstuff
+.page-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+*/
+
+.img-gallery__item:hover .overlay {
+    opacity: .95;
 }
 
 .header {
+    grid-column-start: 1;
+    grid-column-end:3;
+    grid-row:1;
     text-align: center;
+    margin:20px;
 }
 
 .header h1 {
-    text-align: center;
     color: #997FDC;
     font-size: 3em;
 }
 
 .header h2 {
-    text-align: center;
     color: #B4A0E5;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .topnav {
+    grid-column-start:3;
+    grid-column-end:5;
+    grid-row:1;
     overflow: hidden;
     margin:auto;
     width:fit-content;
@@ -98,10 +149,19 @@ img {
     background-color: #9F4A54;
 }
 
+.content {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
 p {
     text-align: center;
     color: #E7CFCD;
     font-size: 1em;
+}
+
+a {
+    color:#B4A0E5
 }
 
 div.intro {
@@ -125,11 +185,6 @@ div.intro {
     padding: .5rem;
     padding-left: 1rem;
 }
-
-.footer a {
-    color:#B4A0E5
-}
-
 .footer p {
     text-align: left;
     color: #E7CFCD;
@@ -138,6 +193,28 @@ div.intro {
 
 .footer img {
     margin-right:5px;
+}
+
+.contents {
+    grid-column-start:1;
+    grid-column-end:2;
+    overflow: hidden;
+    text-align: left;
+}
+
+.contents a {
+    border: 1px solid #515B3A;;
+    color: #353D2F;
+    display:block;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.25em;
+    text-decoration: none;
+    background-color: #B4A0E5;
+}
+
+.contents a:hover {
+    background-color: #997FDC;
 }
 
 @media only screen and (width >= 1024px) {
