@@ -123,38 +123,6 @@ img {
     text-align: center; 
 }
 
-
-@media only screen and (width >= 1024px) {
-    .img-gallery {
-      --gallery-items-per-row: 2;
-    }
-
-    .index-container {
-        grid-template-areas:
-        'header header navbar navbar'
-        'content content content content';
-    }
-
-    .about-container {
-        grid-template-areas:
-        'header header navbar navbar'
-        'about about about profile';
-    }
-
-    .works-container {
-        grid-template-areas:
-        'header header navbar navbar'
-        'contents content content content';
-    }
-
-    .project-container {
-        grid-template-areas:
-        'title title profile'
-        'description description profile'
-        'teamlist teamlist teamlist';
-    }
-}
-
 .header {
     grid-area: header;
     text-align: center;
@@ -331,14 +299,10 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-    'title title profile'
-    'description description profile'
-    'teamlist teamlist teamlist';
-    /*grid-template-areas:
         'title title title'
         'profile profile profile'
         'description description description'
-        'teamlist teamlist teamlist';*/
+        'teamlist teamlist teamlist';
 }
 
 .project-title {
@@ -366,7 +330,36 @@ a {
     margin-bottom:5px;
 }
 
+@media only screen and (width >= 1024px) {
+    .img-gallery {
+      --gallery-items-per-row: 2;
+    }
 
+    .index-container {
+        grid-template-areas:
+        'header header navbar navbar'
+        'content content content content';
+    }
+
+    .about-container {
+        grid-template-areas:
+        'header header navbar navbar'
+        'about about about profile';
+    }
+
+    .works-container {
+        grid-template-areas:
+        'header header navbar navbar'
+        'contents content content content';
+    }
+
+    .project-container {
+        grid-template-areas:
+        'title title profile'
+        'description description profile'
+        'teamlist teamlist teamlist';
+    }
+}
 
 
 /* colors:
