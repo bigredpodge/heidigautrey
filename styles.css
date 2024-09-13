@@ -75,16 +75,45 @@ img {
     text-align: center; 
 }
   
-.page-container {
+.index-container {
     padding: var(--container-padding);
     max-width: var(--container-width);
     margin-right: auto;
     margin-left: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+        'header'
+        'navbar'
+        'content';
     gap:4px;
-    padding:4px
-    
+}
+
+.about-container {
+    padding: var(--container-padding);
+    max-width: var(--container-width);
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'navbar'
+        'profile'
+        'about';
+    gap:4px;
+}
+
+.works-container {
+    padding: var(--container-padding);
+    max-width: var(--container-width);
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'navbar'
+        'contents'
+        'content';
+    gap:4px;
 }
 
 /*
@@ -100,11 +129,8 @@ img {
 }
 
 .header {
-    grid-column-start: 1;
-    grid-column-end:3;
-    grid-row:1;
+    grid-area: header;
     text-align: center;
-    margin:20px;
 }
 
 .header h1 {
@@ -118,9 +144,7 @@ img {
 }
 
 .topnav {
-    grid-column-start:3;
-    grid-column-end:5;
-    grid-row:1;
+    grid-area: navbar;
     overflow: hidden;
     margin:auto;
     width:fit-content;
@@ -149,8 +173,7 @@ img {
 }
 
 .content {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-area: content;
 }
 
 p {
@@ -163,17 +186,16 @@ a {
     color:#B4A0E5
 }
 
-div.intro {
+.intro {
     text-align: center;
     color: #E7CFCD;
     font-size: 1.25em;
-    padding: 10px;
 }
 
 .intro h3 {
     text-align: center;
     color:  #B4A0E5;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .footer {
@@ -196,8 +218,7 @@ div.intro {
 }
 
 .contents {
-    grid-column-start:1;
-    grid-column-end:2;
+    grid-area: contents;
     overflow: hidden;
     text-align: left;
 }
@@ -221,11 +242,28 @@ div.intro {
     .img-gallery {
       --gallery-items-per-row: 2;
     }
+
+    .index-container {
+        grid-template-areas:
+        'header header navbar navbar'
+        'content content content content';
+    }
+
+    .about-container {
+        grid-template-areas:
+        'header header navbar navbar'
+        'about about about profile';
+    }
+
+    .works-container {
+        grid-template-areas:
+        'header header navbar navbar'
+        'contents content content content';
+    }
 }
 
 .aboutintro {
-    grid-column-start:1;
-    grid-column-end:4;
+    grid-area: about;
     overflow: hidden;
     text-align: center;
     font-size: 1.25em;
@@ -256,15 +294,14 @@ div.intro {
 }
 
 .profilepic {
-    grid-column-start:4;
-    grid-column-end:5;
+    grid-area: profile;
     text-align: center;
+    padding:10px;
     img {
         aspect-ratio: 1;
         object-fit: cover;
         padding:4px;
       }
-      padding:10px;
 }
 
 
