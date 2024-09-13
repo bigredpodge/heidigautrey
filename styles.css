@@ -54,8 +54,6 @@ body {
 .works-container {
     padding: var(--container-padding);
     max-width: var(--container-width);
-    margin-right: auto;
-    margin-left: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -64,6 +62,8 @@ body {
         'contents contents contents contents'
         'content content content content';
     gap:4px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 img {
@@ -303,6 +303,11 @@ a {
         'profile profile profile'
         'description description description'
         'teamlist teamlist teamlist';
+    padding: 4px;
+    background-color:#647048;
+    border: 2px solid #515B3A;
+    border-radius: 2%;
+    margin:10px;
 }
 
 .project-title {
