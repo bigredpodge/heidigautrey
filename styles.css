@@ -266,6 +266,8 @@ a {
     font-size: 1.25em;
     text-decoration: none;
     background-color: #B4A0E5;
+    margin-left:20px;
+    margin-right:20px;
 }
 
 .contents a:hover {
